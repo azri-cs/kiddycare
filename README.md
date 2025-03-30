@@ -8,11 +8,9 @@ This Laravel-based web application provides a babysitter reservation system wher
 - No Login Required for Initial Booking
 - Address information and special instructions handling
 - Automated booking number generation
-- Recurring booking functionality with customizable patterns
 - Age validation for children (1 month to 12 years and 11 months)
 - Comprehensive validation rules for booking dates and times
 - Status tracking of babysitting requests
-- Optional Account Creation at Confirmation
 
 ## Tech Stack
 
@@ -34,9 +32,6 @@ Stores all the status for lookup instead of enums.
 
 ### CareRecipient
 Stores information about the children requiring care, including age validation.
-
-### RecurrenceFrequency
-Stores reservation recurring type such as `daily`, `weekly` or `monthly` for lookup instead of enums.
 
 ### User
 Stores user authentication details with role-based permissions (customer, support, admin).
@@ -110,25 +105,15 @@ Displays booking confirmation with:
 - Summary of all booking details
 - Current status of the booking (initially "Pending")
 - Contact information for further inquiries
-- Option to modify or cancel the booking (if applicable)
 
 ## Booking Workflow
 
 1. Customer submits a booking request
 2. System generates a unique booking number
 3. Request status is set to "Pending"
-4. Customer support is notified of new booking
-5. Support staff can assign, confirm, or cancel requests
-6. Status updates are communicated to the customer
-
-## Recurring Booking Options
-
-The system supports recurring bookings with:
-- Multiple frequency options (daily, weekly, monthly)
-- Specific weekday selection
-- Custom start and end dates
-- Maximum number of occurrences limitation
-- Consistent time slots across recurrences
+4. Customer support is notified of new booking (WIP)
+5. Support staff can assign, confirm, or cancel requests (WIP)
+6. Status updates are communicated to the customer (WIP)
 
 ## Frontend Implementation
 
